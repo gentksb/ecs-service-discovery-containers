@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  ssm-to-fargate-backend:
+    build: .
+    image: ssm-to-fargate-backend
+    container_name: ssm-to-fargate-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - SSM_AGENT_CODE
+      - SSM_AGENT_ID
+      - AWS_DEFAULT_REGION
