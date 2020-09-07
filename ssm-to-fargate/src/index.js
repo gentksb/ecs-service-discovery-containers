@@ -20,7 +20,7 @@ app.get('/', async (req, res) => {
       console.log(error);
       return error
     })
-  res.send(`<h1>This is Internal Servise response<h1>\r<p>${internalResponse}</p>`)
+  res.send(`<h1>ECS-fargate Service Discovery DEMO</h1>\r<code>${internalResponse}</code>`)
 })
 
 app.listen(80)
