@@ -6,7 +6,7 @@
 
 ![ARCHITECTURE](./architecture.png)
 
-# 構成
+## 構成
 
 ```
 /backend/ ...node.jsのAPIサーバー("This section backend API response"を返す)
@@ -14,7 +14,7 @@
 docker-compose.yml ...ローカルデバッグ用
 ```
 
-# ENV
+## ENV
 
 ```
 export SSM_AGENT_CODE={SSMのハイブリッドアクティベーションコード}
@@ -23,13 +23,13 @@ export AWS_DEFAULT_REGION={region}
 export BACKEND_HOST_URL=http://{バックエンドサービスのプライベートホスト名}:8000/
 ```
 
-# local
+## local
 
 `docker-compose up --build`
 
 `localhost` にアクセスすると、バックエンドからのレスポンスが表示される
 
-# 構築
+## 構築
 
 1. 以下のサービスを作成する(ターゲットグループはリスナー未設定)
   - VPC
@@ -46,3 +46,8 @@ export BACKEND_HOST_URL=http://{バックエンドサービスのプライベー
 6. フロントエンドのタスク定義環境変数(`BACKEND_HOST_URL`)にバックエンドサービスのURLを登録する
 7. サービスをすべて再デプロイする
 8. ALBのドメインにアクセスして、レスポンスを確認
+
+## リリース
+
+v0.1 ... GUI
+v0.2 ... CUI
