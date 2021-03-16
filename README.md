@@ -4,6 +4,9 @@
 
 各タスクは自動的にSSMエージェントに登録されれ、セッションマネージャーでログイン可能。
 
+なお、2021/3/16現在[Fargateでもコマンドを実行できるようになった](https://aws.amazon.com/jp/about-aws/whats-new/2021/03/amazon-ecs-now-allows-you-to-execute-commands-in-a-container-running-on-amazon-ec2-or-aws-fargate/)ので、SSMエージェント関連のコードは不要になった。
+
+
 ![ARCHITECTURE](./architecture.png)
 
 ## 構成
